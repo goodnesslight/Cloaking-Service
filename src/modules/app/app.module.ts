@@ -1,4 +1,5 @@
 import { DetectionModule } from '@modules/detection/detection.module';
+import { ValidationModule } from '@modules/validation/validation.module';
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
@@ -19,6 +20,7 @@ import { MongooseModule } from '@nestjs/mongoose';
       },
     }),
     DetectionModule,
+    ValidationModule,
   ],
 })
 export class AppModule {}
