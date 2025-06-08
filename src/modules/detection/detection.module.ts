@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { DetectionController } from './detection.controller';
-import { DetectionService } from 'src/modules/detection/detection.service';
+import { DetectionService } from '@modules/detection/detection.service';
 
 @Module({
   imports: [],
