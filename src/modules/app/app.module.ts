@@ -9,9 +9,14 @@ import { MongooseModule } from '@nestjs/mongoose';
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
-      useFactory: (service: ConfigService) => ({
-        uri: service.get<string>('MONGO_URI'),
-      }),
+      useFactory: (config: ConfigService) => {
+        const hostname: string = config.get<string>('MONGO_HOSTNAME');
+        const port: string = config.get<string>('MONGO_PORT');
+        const database: string = config.get<string>('MONGO_DATABASE');
+        return {
+          uri: `mongodb://${hostname}:${port}/${database}`,
+        };
+      },
     }),
     DetectionModule,
   ],
