@@ -8,5 +8,6 @@ import { DetectionModule } from '@modules/detection/detection.module';
   imports: [VpnApiModule, DetectionModule],
   controllers: [ValidationController],
   providers: [ValidationService],
+  exports: [ValidationService],
 })
 export class ValidationModule {}
