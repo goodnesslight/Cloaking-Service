@@ -11,7 +11,7 @@ export class ValidationController {
 
   @Post('validate')
   @ApiOperation({
-    summary: 'Validates IP and detect bot usage',
+    summary: 'Validating IP addresses and detecting bot activity',
   })
   @ApiBody({
     type: ValidationValidateDto,
