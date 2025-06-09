@@ -32,7 +32,8 @@ import { MongooseModule } from '@nestjs/mongoose';
         return {
           type: 'single',
           options: {
-            url: `redis://${hostname}:${port}`,
+            host: hostname,
+            port: Number(port),
             password,
           },
         };
