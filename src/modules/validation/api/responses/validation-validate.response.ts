@@ -4,4 +4,7 @@ import { ApiProperty } from '@nestjs/swagger';
 export class ValidationValidateResponse implements ValidationValidateStructure {
   @ApiProperty()
   ip: string;
+
+  @ApiProperty()
+  isBot: boolean;
 }
