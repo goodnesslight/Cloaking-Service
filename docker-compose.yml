@@ -1,6 +1,24 @@
 version: '3.8'
 
 services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cloaking-service-app
+    restart: unless-stopped
+    working_dir: /app
+    ports:
+      - '${SERVER_PORT}:3000'
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - /app/node_modules
+    depends_on:
+      - mongo
+      - redis
+
   mongo:
     image: mongo:latest
     container_name: cloaking-service-mongo
