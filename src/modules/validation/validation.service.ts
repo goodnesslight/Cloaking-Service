@@ -19,10 +19,7 @@ export class ValidationService {
       dto.ip,
     );
     const isBot: boolean =
-      response.security.vpn ||
-      response.security.proxy ||
-      response.security.tor ||
-      response.security.relay;
+      response.security.vpn || response.security.proxy || response.security.tor;
 
     if (isBot) {
       await this.detectionService.create(dto);
