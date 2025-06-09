@@ -18,18 +18,9 @@ services:
     restart: unless-stopped
     ports:
       - '${REDIS_PORT}:6379'
-    environment:
-      - REDIS_PASSWORD=${REDIS_PASSWORD}
     volumes:
       - redis_data:/data
-    command:
-      [
-        'redis-server',
-        '--requirepass',
-        '${REDIS_PASSWORD}',
-        '--appendonly',
-        'yes',
-      ]
+    command: ['redis-server', '--appendonly', 'yes']
 
 volumes:
   mongo_data:
