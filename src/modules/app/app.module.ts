@@ -1,3 +1,4 @@
+import { CacheModule } from '@modules/cache/cache.module';
 import { DetectionModule } from '@modules/detection/detection.module';
 import { ValidationModule } from '@modules/validation/validation.module';
 import { VpnApiModule } from '@modules/vpn-api/vpn-api.module';
@@ -37,6 +38,7 @@ import { MongooseModule } from '@nestjs/mongoose';
         };
       },
     }),
+    CacheModule,
     DetectionModule,
     ValidationModule,
     VpnApiModule,
