@@ -1,19 +1,19 @@
 //#region Getted from response example (https://vpnapi.io/api-documentation)
 export interface VpnApiCheckIpBasicStructure {
   ip: string;
-  security: VpnApiCheckIpSecurityStructure;
-  location: VpnApiCheckIpLocationStructure;
-  network: VpnApiCheckIpNetworkStructure;
+  security: VpnApiSecurityBasicStructure;
+  location: VpnApiLocationBasicStructure;
+  network: VpnApiNetworkBasicStructure;
 }
 
-export interface VpnApiCheckIpSecurityStructure {
+export interface VpnApiSecurityBasicStructure {
   vpn: boolean;
   proxy: boolean;
   tor: boolean;
   relay: boolean;
 }
 
-export interface VpnApiCheckIpLocationStructure {
+export interface VpnApiLocationBasicStructure {
   city: string;
   region: string;
   country: string;
@@ -29,7 +29,7 @@ export interface VpnApiCheckIpLocationStructure {
   is_in_european_union: boolean;
 }
 
-export interface VpnApiCheckIpNetworkStructure {
+export interface VpnApiNetworkBasicStructure {
   network: string;
   autonomous_system_number: string;
   autonomous_system_organization: string;
