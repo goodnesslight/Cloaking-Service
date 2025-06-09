@@ -1,6 +1,6 @@
-import { VpnApiSecurityBasicStructure } from '@modules/vpn-api/vpn-api.types';
+import { VpnApiSecurityStructure } from '@modules/vpn-api/vpn-api.types';
 
-export class VpnApiSecurityResponse implements VpnApiSecurityBasicStructure {
+export class VpnApiSecurityResponse implements VpnApiSecurityStructure {
   vpn: boolean;
   proxy: boolean;
   tor: boolean;

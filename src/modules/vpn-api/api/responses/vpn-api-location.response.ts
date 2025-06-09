@@ -1,6 +1,6 @@
-import { VpnApiLocationBasicStructure } from '@modules/vpn-api/vpn-api.types';
+import { VpnApiLocationStructure } from '@modules/vpn-api/vpn-api.types';
 
-export class VpnApiLocationResponse implements VpnApiLocationBasicStructure {
+export class VpnApiLocationResponse implements VpnApiLocationStructure {
   city: string;
   region: string;
   country: string;

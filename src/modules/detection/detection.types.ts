@@ -1,3 +1,3 @@
-export interface DetectionBasicStructure {
+export interface DetectionStructure {
   ip: string;
 }

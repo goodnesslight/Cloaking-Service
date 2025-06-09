@@ -1,1 +1,3 @@
-export interface ValidationBasicStructure {}
+export interface ValidationValidateStructure {
+  ip: string;
+}
