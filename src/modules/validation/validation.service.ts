@@ -25,7 +25,7 @@ export class ValidationService {
       response.security.relay;
 
     if (isBot) {
-      await this.detectionService.create(dto.ip);
+      await this.detectionService.create(dto);
     }
 
     return { ...dto, isBot };
