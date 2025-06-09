@@ -1,3 +1,4 @@
+import { DetectionCreateDto } from '@modules/detection/api/dtos/detection-create.dto';
 import { DetectionRepository } from '@modules/detection/detection.repository';
 import { Injectable } from '@nestjs/common';
 
@@ -5,7 +6,7 @@ import { Injectable } from '@nestjs/common';
 export class DetectionService {
   constructor(private readonly repository: DetectionRepository) {}
 
-  async create(ip: string): Promise<void> {
-    await this.repository.create({ ip });
+  async create(dto: DetectionCreateDto): Promise<void> {
+    await this.repository.create(dto);
   }
 }
