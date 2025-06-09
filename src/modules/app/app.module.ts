@@ -1,5 +1,7 @@
 import { DetectionModule } from '@modules/detection/detection.module';
 import { ValidationModule } from '@modules/validation/validation.module';
+import { VpnApiModule } from '@modules/vpn-api/vpn-api.module';
+import { RedisModule } from '@nestjs-modules/ioredis';
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
@@ -19,8 +21,25 @@ import { MongooseModule } from '@nestjs/mongoose';
         };
       },
     }),
+    RedisModule.forRootAsync({
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (config: ConfigService) => {
+        const hostname: string = config.get<string>('REDIS_HOSTNAME');
+        const port: string = config.get<string>('REDIS_PORT');
+        const password: string = config.get<string>('REDIS_PASSWORD');
+        return {
+          type: 'single',
+          options: {
+            url: `redis://${hostname}:${port}`,
+            password,
+          },
+        };
+      },
+    }),
     DetectionModule,
     ValidationModule,
+    VpnApiModule,
   ],
 })
 export class AppModule {}
