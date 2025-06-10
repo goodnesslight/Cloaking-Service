@@ -1,5 +1,5 @@
-import { CacheKey } from '@modules/cache/cache.enums';
-import { CacheService } from '@modules/cache/cache.service';
+import { CacheKey } from 'src/external/cache/cache.enums';
+import { CacheService } from 'src/external/cache/cache.service';
 import { VpnApiCheckIpCache } from '@modules/vpn-api/vpn-api.types';
 import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';

@@ -1,7 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRedis } from '@nestjs-modules/ioredis';
 import Redis from 'ioredis';
-import { CacheKey } from '@modules/cache/cache.enums';
+import { CacheKey } from 'src/external/cache/cache.enums';
 
 @Injectable()
 export class CacheService {
