@@ -30,7 +30,7 @@ npm run prepare
 
 ---
 
-## 🔑 Getting VPN API Key
+## 🔑 Setup
 
     1. Open https://vpnapi.io
     2. Register an account
