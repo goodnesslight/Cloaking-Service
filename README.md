@@ -21,14 +21,16 @@ REST API service for detecting bots and filtering suspicious requests.
 ## 🛠 Installation
 
 ```
-git clone https://github.com/goodnesslight/Cloaking-Service.git
+git clone git@github.com:goodnesslight/Cloaking-Service.git
 cd Cloaking-Service
 cp .env.example .env
+npm install
+npm run prepare
 ```
 
 ---
 
-## 🔑 Getting VPN API Key
+## 🔑 Setup
 
     1. Open https://vpnapi.io
     2. Register an account
