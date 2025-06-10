@@ -24,6 +24,8 @@ REST API service for detecting bots and filtering suspicious requests.
 git clone https://github.com/goodnesslight/Cloaking-Service.git
 cd Cloaking-Service
 cp .env.example .env
+npm install
+npm run prepare
 ```
 
 ---
